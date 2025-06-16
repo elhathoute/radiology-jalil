@@ -5,113 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radiologie Pompidou Ain Chock</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
-<body class="relative bg-cover bg-center text-white" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipO3sMabUcITHUr9ON1hOCKFngpQawFGhJDTSEjz=w203-h203-k-no');">
+<body class="relative  text-white" >
 
 <!-- Overlay -->
-<div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
 <!-- Header -->
-<header class="fixed top-0 left-0 w-full bg-transparent z-50 flex justify-between items-center px-10 py-6 backdrop-blur-md">
+<header id="mainHeader" class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-70 z-50 flex justify-between items-center px-10 backdrop-blur-md py-4">
     <div class="flex items-center space-x-4">
-        <img src="assets/img/logo.jpg" style="max-height: 50px !important;" class="rounded rounded-5">
+        <img src="assets/img/logo.png" alt="Logo" class="max-h-20 rounded">
     </div>
-
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-        <ul class="flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-                <a class="block !text-[#2a93d5] py-4 px-3 text-sm text-white bg-blue-700 rounded md:bg-transparent md:p-0 md:dark:text-blue-500" href="/">ACCUEIL</a>
-            </li>
-            <li>
-                <a class="block py-4 px-3 text-sm text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2a93d5] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="/about">NOUS CONNAÎTRE</a>
-            </li>
-            <li class="group relative">
-                <a class="block py-4 flex px-3 text-sm text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2a93d5] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="/departments">
-                    LES EXAMENS
-                    <svg class="w-5 h-5 pl-1 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
-                    </svg>
-                </a>
-                <ul class="hidden group-hover:block w-56 absolute bg-white text-sm text-gray-700 dark:text-gray-400 z-100" aria-labelledby="dropdownLargeButton">
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/radiologie-interventionnelle">Radiologie Interventionnelle</a></li>
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/imagerie-de-la-femme">Imagerie de la femme</a></li>
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/radiographie">Radiographie</a></li>
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/echographie">Echographie</a></li>
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/scanner">Scanner</a></li>
-                    <li><a class="block px-4 py-4 hover:bg-[#2a93d5]/50 dark:hover:bg-gray-600 dark:hover:text-white" href="/irm">I.R.M</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="block py-4 px-3 text-sm text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2a93d5] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="/cartesante">Carte Santé</a>
-            </li>
-            <li>
-                <a class="block py-4 px-3 text-sm text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2a93d5] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" href="/articles">ACTUALITÉS</a>
-            </li>
-        </ul>
-        <div class="flex md:order-2 mx-10 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <a class="text-white rounded tracking-widest bg-[#2a93d5] uppercase hover:bg-blue-800 text-sm px-8 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700" href="/prenez-rendez-vous">
-                Prenez Rendez-Vous
-            </a>
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+    <nav class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-blue-400 font-semibold">ACCUEIL</a>
+        <a href="/about" class="hover:text-blue-400">NOUS CONNAÎTRE</a>
+        <div class="relative group">
+            <button class="flex items-center hover:text-blue-400 focus:outline-none">
+                LES EXAMENS
+                <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
+            <ul class="absolute hidden group-hover:block bg-white text-gray-800 mt-2 rounded shadow w-64 z-50">
+                <li><a href="/irm" class="block px-4 py-2 hover:bg-blue-100">IRM 1,5 T multicanaux ultra rapide</a></li>
+                <li><a href="/scanner" class="block px-4 py-2 hover:bg-blue-100">Scanner 64 barrettes Smart génération</a></li>
+                <li><a href="/radiographie" class="block px-4 py-2 hover:bg-blue-100">Radiographie os, poumon et Smart Ortho</a></li>
+                <li><a href="/echographie" class="block px-4 py-2 hover:bg-blue-100">Échographie Doppler dernière génération</a></li>
+                <li><a href="/mammographie" class="block px-4 py-2 hover:bg-blue-100">Mammographie numérique Low Dose</a></li>
+                <li><a href="/dentaire" class="block px-4 py-2 hover:bg-blue-100">Panoramique dentaire & Cone Beam 2D/3D</a></li>
+                <li><a href="/osteodensitometrie" class="block px-4 py-2 hover:bg-blue-100">OSTEODENSITOMÉTRIE corps entier</a></li>
+            </ul>
+
         </div>
+        <a href="/cartesante" class="hover:text-blue-400">Carte Santé</a>
+        <a href="/articles" class="hover:text-blue-400">ACTUALITÉS</a>
+    </nav>
+    <div class="md:hidden">
+        <!-- Mobile menu button can be added here if needed -->
     </div>
 </header>
 
 <!-- Main Content -->
-<main class="relative z-10 px-10 md:px-20 py-20 mt-20 flex flex-col md:flex-row gap-10">
-    <!-- Left Section -->
+<main class="bg-cover bg-center relative z-10 px-6 md:px-20 py-20 mt-28 flex flex-col md:flex-row gap-10" style="background-image: url('assets/img/img_1.jpeg');">
     <section class="md:w-1/2">
         <h1 class="text-4xl font-semibold leading-tight">
-            Centre de Radiologie <br />
-            <span class="text-blue-400">POMPIDOU · AIN CHOCK</span>
+            Centre d’Imagerie Médicale<br />
+            <span class="text-blue-400">POMPIDOU - AIN CHOCK</span>
         </h1>
-        <p class="mt-6 text-lg leading-relaxed max-w-xl">
-            IRM ⚡ Scanner · Radios · Mammographie<br />
-            🦷 Panoramique dentaire · Cone Beam<br />
-            🩻 Échographie · Doppler · 🔍 Ostéodensitométrie<br />
-            👩‍⚕️ <a href="https://instagram.com/dr.elouardighi.lamiae" class="underline">@dr.elouardighi.lamiae</a>
+        <p class="mt-6 text-lg leading-relaxed">
+            Situé au cœur de Casablanca, notre centre met à votre disposition une technologie de pointe pour un diagnostic rapide, précis et sécurisé. Notre équipe médicale vous accompagne avec rigueur et bienveillance à chaque étape de votre parcours.
         </p>
-        <a href="https://www.instagram.com/radiologie.pompidou?utm_source=qr" target="_blank" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow">
-            Instagram
+        <a href="/prenez-rendez-vous" class="mt-6 inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded shadow text-sm uppercase tracking-wider">
+            Prenez Rendez-Vous
         </a>
     </section>
-
-    <!-- Right Section: Horaires -->
-    <aside class="md:w-1/3 bg-blue-900 bg-opacity-80 p-8 rounded-lg shadow-lg text-white">
+    <aside class="md:w-1/3 bg-blue-900 bg-opacity-80 p-8 rounded-lg shadow-lg">
         <h2 class="text-xl font-semibold border-b border-blue-400 pb-2 mb-4">Horaires</h2>
         <div class="space-y-4 text-sm">
             <div class="flex justify-between">
-                <span>Lundi – Vendredi</span>
-                <span>8:30 – 19:00</span>
+                <span>Lundi – Vendredi</span><span>8:30 – 19:00</span>
             </div>
             <div class="flex justify-between">
-                <span>Samedi</span>
-                <span>8:30 – 13:00</span>
+                <span>Samedi</span><span>8:30 – 13:00</span>
             </div>
         </div>
-        <p class="mt-6 border-t border-blue-400 pt-4 text-center text-sm">
-            +212 522 50 51 55
-        </p>
+        <p class="mt-6 text-center border-t border-blue-400 pt-4 text-sm">+212 522 50 51 55</p>
     </aside>
 </main>
 
-<!-- WhatsApp Floating Icon -->
 <a href="https://wa.me/212522505155" target="_blank" class="fixed bottom-6 left-6 z-50">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="h-12 w-12">
 </a>
 
-<!-- Map -->
-<section class="relative z-10 px-10 md:px-20 py-20 bg-white text-gray-800">
-    <h2 class="text-2xl font-semibold mb-6">Nous Trouver</h2>
-    <div class="w-full h-[450px]">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13303.102072079624!2d-7.597336606329339!3d33.53322162148668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63300395b28cd%3A0xcb251b4e1c2ac09c!2sCentre%20de%20RADIOLOGIE%20POMPIDOU%20AIN%20CHOCK!5e0!3m2!1sen!2sma!4v1749987284470!5m2!1sen!2sma" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section class="flex flex-col md:flex-row items-center px-6 py-16 max-w-6xl mx-auto text-gray-800 gap-12">
+    <!-- Colonne 1 : Image -->
+    <div class="w-full h-full md:w-1/2">
+        <img src="assets/img/img_11.jpeg" alt="Centre Radiologie Pompidou" class="w-full rounded-lg shadow-lg" />
+    </div>
+
+    <!-- Colonne 2 : Texte + Icônes -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6">
+            Bienvenue au Centre de Radiologie<br />
+        </h2>
+        <p class="text-md leading-relaxed">
+            🔍 Explorez l'excellence en imagerie médicale 🔬<br />
+            Chez <strong>Radiologie Pompidou - Ain Chock</strong>, nous mettons à votre disposition une technologie de pointe pour un diagnostic précis et rapide 🏥✨<br /><br />
+            Depuis sa création, notre centre s'engage à offrir un accès simplifié à l’imagerie médicale moderne à travers un environnement humain, professionnel et innovant.
+        </p>
+
+        <!-- Blocs d'information -->
+        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center mt-10 gap-10">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="assets/img/wave-divider.png" alt="Le Centre" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
+                <p class="font-semibold">LE CENTRE</p>
+                <p class="text-sm text-center md:text-left">Découvrez notre engagement et notre équipe</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <img src="assets/img/wave-divider.png" alt="Nos Services" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
+                <p class="font-semibold">NOS SERVICES</p>
+                <p class="text-sm text-center md:text-left">Une page dédiée pour mieux les découvrir</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <img src="assets/img/wave-divider.png" alt="Prenez RDV" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
+                <p class="font-semibold">PRENEZ RENDEZ-VOUS</p>
+                <p class="text-sm text-center md:text-left">Planifiez votre consultation facilement</p>
+            </div>
+        </div>
     </div>
 </section>
+
+<section class="text-center px-6 py-16 max-w-5xl mx-auto text-gray-800">
+    <div class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
+        <h1 class="text-xl font-semibold text-gray-700 dark:text-gray-200">Prendre Rendez-vous</h1>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Remplissez le formulaire ci-dessous pour réserver une consultation ou un examen.</p>
+
+        <form class="mt-6">
+            <div class="grid md:grid-cols-2 md:gap-6 mt-4">
+                <div>
+                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom complet*</label>
+                    <input type="text" required placeholder="Votre nom" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse e-mail*</label>
+                    <input type="email" required placeholder="nom@example.com" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 md:gap-6 mt-6">
+                <div>
+                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Téléphone*</label>
+                    <input type="tel" required placeholder="+212 6 12 34 56 78" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Date souhaitée*</label>
+                    <input type="date" required class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
+                </div>
+            </div>
+
+            <div class="mt-6">
+                <label for="examen" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Type d'examen souhaité*</label>
+                <select id="examen" required class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-[#2a93d5] focus:border-[#2a93d5] block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <option value="" disabled selected>Sélectionnez un examen</option>
+                    <option>IRM</option>
+                    <option>Scanner</option>
+                    <option>Radiographie</option>
+                    <option>Échographie</option>
+                    <option>Imagerie de la femme</option>
+                    <option>Radiologie interventionnelle</option>
+                </select>
+            </div>
+
+            <div class="mt-6">
+                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                <textarea placeholder="Informations complémentaires (facultatif)" class="block w-full h-32 px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white transition-colors duration-300 transform bg-[#2a93d5] rounded-md hover:bg-blue-600 focus:outline-none">
+                Envoyer la demande de rendez-vous
+            </button>
+        </form>
+    </div>
+
+</section>
+<footer class="bg-white text-gray-700 pt-12 pb-6 border-t">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+            <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou" class="w-32 mb-4">
+            <p class="mb-2">
+                🔍 <strong>Explorez l'excellence en imagerie médicale</strong> 🔬<br>
+                Chez <strong>Radiologie Pompidou - Ain Chock</strong>, nous mettons à votre disposition une technologie de pointe pour un diagnostic précis et rapide 🏥✨
+            </p>
+            <p class="text-sm">En savoir plus sur nous</p>
+            <div class="flex space-x-4 mt-4 text-blue-500 text-xl">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-2 border-b border-blue-500 w-fit pb-1">NOUS CONTACTER</h3>
+            <p class="mb-1">📍 Angle Bd El Qods & Av. 2Mars Ain Chock</p>
+            <p class="mb-1">📞 05 22 50 51 55</p>
+            <p class="mb-4">📧 radiologiepompidou2025@gmail.com</p>
+            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-2 border-b border-blue-500 w-fit pb-1">NOS EXAMENS</h3>
+            <ul class="space-y-2 text-sm">
+                <li>➤ IRM 1,5 T multicanaux ultra rapide</li>
+                <li>➤ Scanner 64 barrettes Smart génération</li>
+                <li>➤ Radiographie os, poumon et Smart Ortho</li>
+                <li>➤ Échographie Doppler dernière génération</li>
+                <li>➤ Mammographie numérique Low Dose</li>
+                <li>➤ Panoramique dentaire & Cone Beam 2D/3D</li>
+                <li>➤ OSTEODENSITOMÉTRIE corps entier</li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center text-gray-500 text-sm mt-10 border-t pt-4">
+        © 2025 Centre de Radiologie Pompidou. Tous droits réservés.
+    </div>
+</footer>
 
 </body>
 </html>
