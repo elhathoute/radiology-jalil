@@ -1,214 +1,732 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radiologie Pompidou Ain Chock</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Radiologie Pompidou - Ain Chock | Imagerie Médicale de Pointe</title>
+  <meta name="description" content="Explorez l'excellence en imagerie médicale chez Radiologie Pompidou - Ain Chock. Diagnostic rapide et précis avec des équipements de dernière génération.">
+  <meta name="keywords" content="Radiologie, Imagerie Médicale, IRM, Scanner, Échographie, Centre Médical, Ain Chock, Casablanca, Radiologie Pompidou">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="relative  text-white" >
 
-<!-- Overlay -->
 
-<!-- Header -->
-<header id="mainHeader" class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-70 z-50 flex justify-between items-center px-10 backdrop-blur-md py-4">
-    <div class="flex items-center space-x-4">
-        <img src="assets/img/logo.png" alt="Logo" class="max-h-20 rounded">
+<body class="index-page">
+
+<header id="header" class="header sticky-top">
+
+  <div class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="d-none d-md-flex align-items-center">
+        <i class="bi bi-clock me-1"></i> Lundi - Samedi, 8h00 à 22h00
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-phone me-1"></i> Appelez-nous : 0522505155
+      </div>
     </div>
-    <nav class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-blue-400 font-semibold">ACCUEIL</a>
-        <a href="/about.html" class="hover:text-blue-400">NOUS CONNAÎTRE</a>
-        <div class="relative group">
-            <button class="flex items-center hover:text-blue-400 focus:outline-none">
-                LES EXAMENS
-                <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-            <ul class="absolute hidden group-hover:block bg-white text-gray-800 mt-2 rounded shadow w-64 z-50">
-                <li><a href="/irm" class="block px-4 py-2 hover:bg-blue-100">IRM 1,5 T multicanaux ultra rapide</a></li>
-                <li><a href="/scanner" class="block px-4 py-2 hover:bg-blue-100">Scanner 64 barrettes Smart génération</a></li>
-                <li><a href="/radiographie" class="block px-4 py-2 hover:bg-blue-100">Radiographie os, poumon et Smart Ortho</a></li>
-                <li><a href="/echographie" class="block px-4 py-2 hover:bg-blue-100">Échographie Doppler dernière génération</a></li>
-                <li><a href="/mammographie" class="block px-4 py-2 hover:bg-blue-100">Mammographie numérique Low Dose</a></li>
-                <li><a href="/dentaire" class="block px-4 py-2 hover:bg-blue-100">Panoramique dentaire & Cone Beam 2D/3D</a></li>
-                <li><a href="/osteodensitometrie" class="block px-4 py-2 hover:bg-blue-100">OSTEODENSITOMÉTRIE corps entier</a></li>
+  </div><!-- End Top Bar -->
+
+  <div class="branding d-flex align-items-center">
+
+    <div class="container position-relative d-flex align-items-center justify-content-end">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Accueil</a></li>
+          <li><a href="#about">Centre</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Examens</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#irm">➤ IRM 1,5 T multicanaux ultra rapide</a></li>
+              <li><a href="#scanner">➤ Scanner 64 barrettes Smart génération</a></li>
+              <li><a href="#radio">➤ Radiographie os, poumon et Smart Ortho</a></li>
+              <li><a href="#echo">➤ Échographie Doppler dernière génération</a></li>
+              <li><a href="#mammo">➤ Mammographie numérique Low Dose</a></li>
+              <li><a href="#dentaire">➤ Panoramique dentaire & Cone Beam 2D/3D</a></li>
+              <li><a href="#osteo">➤ OSTEODENSITOMÉTRIE corps entier</a></li>
             </ul>
+          </li>
 
-        </div>
-        <a href="/cartesante" class="hover:text-blue-400">Carte Santé</a>
-        <a href="/articles" class="hover:text-blue-400">ACTUALITÉS</a>
-    </nav>
-    <div class="md:hidden">
-        <!-- Mobile menu button can be added here if needed -->
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="#appointment">Prenez un Rendez-vous</a>
+
     </div>
+
+  </div>
+
 </header>
 
-<!-- Main Content -->
-<main class="bg-cover bg-center relative z-10 px-6 md:px-20 py-20 mt-28 flex flex-col md:flex-row gap-10" style="background-image: url('assets/img/img_1.jpeg');">
-    <section class="md:w-1/2">
-        <h1 class="text-4xl font-semibold leading-tight">
-            Centre d’Imagerie Médicale<br />
-            <span class="text-blue-400">POMPIDOU - AIN CHOCK</span>
-        </h1>
-        <p class="mt-6 text-lg leading-relaxed">
-            Situé au cœur de Casablanca, notre centre met à votre disposition une technologie de pointe pour un diagnostic rapide, précis et sécurisé. Notre équipe médicale vous accompagne avec rigueur et bienveillance à chaque étape de votre parcours.
-        </p>
-        <a href="/prenez-rendez-vous" class="mt-6 inline-block text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded shadow text-sm uppercase tracking-wider">
-            Prenez Rendez-Vous
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="assets/img/img_1.jpeg" class="d-block w-100" alt="Centre Radiologie Pompidou Casablanca">
+          <div class="container">
+            <h2>Bienvenue au Centre de Radiologie</h2>
+            <p>🔍 Explorez l'excellence en imagerie médicale 🔬<br>
+              Chez <strong>Radiologie Pompidou - Ain Chock</strong>, nous mettons à votre disposition une technologie de pointe pour un diagnostic précis et rapide 🏥✨</p>
+            <a href="#about" class="btn-get-started">En savoir plus</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="assets/img/img_2.jpeg" class="d-block w-100" alt="IRM - Radiologie Pompidou">
+          <div class="container">
+            <h2>Des équipements de dernière génération</h2>
+            <p>IRM 1,5T multicanaux, Scanner 64 barrettes, Cone Beam 2D/3D, échographie Doppler… tout pour votre santé en un seul centre.</p>
+            <a href="#services" class="btn-get-started">Voir les examens</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="assets/img/img_3.jpeg" class="d-block w-100" alt="Radiologie Pompidou salle d'attente">
+          <div class="container">
+            <h2>Un accueil humain & professionnel</h2>
+            <p>Depuis sa création, notre centre s'engage à offrir un accès simplifié à l’imagerie médicale dans un environnement moderne et chaleureux.</p>
+            <a href="#contact" class="btn-get-started">Contactez-nous</a>
+          </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-star icon"></i></div>
+              <h4><a href="#" class="stretched-link">Excellence du Service</a></h4>
+              <p>Soins professionnels et de haute qualité, avec une approche humaine et personnalisée.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-bolt icon"></i></div>
+              <h4><a href="#" class="stretched-link">Réponse Rapide</a></h4>
+              <p>Une équipe toujours disponible pour répondre à vos demandes sans délai.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-user-md icon"></i></div>
+              <h4><a href="#" class="stretched-link">Professionnels Qualifiés</a></h4>
+              <p>Des spécialistes expérimentés en imagerie et soins associés pour un service optimal.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="fas fa-hand-holding-heart icon"></i></div>
+              <h4><a href="#" class="stretched-link">Soins Personnalisés</a></h4>
+              <p>Des solutions sur mesure pour répondre aux besoins spécifiques de chaque patient.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <section id="about" class="features section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/img_11.jpeg" alt="Radiologie Pompidou - Ain Chock" class="rounded rounded-2">
+          </div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <h3>Bienvenue au Centre de Radiologie Pompidou - Ain Chock</h3>
+            <p>Explorez l'excellence en imagerie médicale grâce à des équipements de dernière génération et une équipe dévouée à votre bien-être.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="fa-solid fa-x-ray flex-shrink-0"></i>
+              <div>
+                <h4><a href="#" class="stretched-link">Imagerie Avancée</a></h4>
+                <p>IRM 1,5 T multicanaux, Scanner 64 barrettes, Cone Beam 3D — pour des diagnostics précis et rapides.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="fa-solid fa-user-doctor flex-shrink-0"></i>
+              <div>
+                <h4><a href="#" class="stretched-link">Équipe médicale experte</a></h4>
+                <p>Des radiologues et techniciens qualifiés vous accompagnent avec professionnalisme et bienveillance.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+              <i class="fa-solid fa-house-chimney-medical flex-shrink-0"></i>
+              <div>
+                <h4><a href="#" class="stretched-link">Centre accueillant</a></h4>
+                <p>Un espace moderne et accessible à tous, pensé pour votre confort tout au long du parcours de soins.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+              <i class="fa-solid fa-microscope flex-shrink-0"></i>
+              <div>
+                <h4><a href="#" class="stretched-link">Innovation continue</a></h4>
+                <p>Nous investissons dans les dernières technologies pour vous garantir des examens toujours plus performants.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Nos Examens</h2>
+        <p>Découvrez la qualité et la diversité de nos examens d'imagerie médicale à la pointe de la technologie.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div id="examensCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row gy-4">
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-microscope"></i></div>
+                    <a href="#" class="stretched-link"><h3>IRM 1,5 T Multicanaux</h3></a>
+                    <img src="assets/img/examens/examen_1.jpeg" alt="IRM" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-x-ray"></i></div>
+                    <a href="#" class="stretched-link"><h3>Scanner 64 Barrettes</h3></a>
+                    <img src="assets/img/examens/examen_2.jpeg" alt="Scanner" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-bone"></i></div>
+                    <a href="#" class="stretched-link"><h3>Radiographie & Smart Ortho</h3></a>
+                    <img src="assets/img/examens/examen_3.jpeg" alt="Radiographie" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row gy-4">
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                    <a href="#" class="stretched-link"><h3>Échographie Doppler</h3></a>
+                    <img src="assets/img/examens/examen_4.jpeg" alt="Doppler" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-venus-mars"></i></div>
+                    <a href="#" class="stretched-link"><h3>Mammographie Low Dose</h3></a>
+                    <img src="assets/img/examens/examen_5.jpeg" alt="Mammographie" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-tooth"></i></div>
+                    <a href="#" class="stretched-link"><h3>Panoramique Dentaire</h3></a>
+                    <img src="assets/img/examens/examen_6.jpeg" alt="Dentaire" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row gy-4 justify-content-center">
+                <div class="col-md-4">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="fas fa-bone"></i></div>
+                    <a href="#" class="stretched-link"><h3>Ostéodensitométrie</h3></a>
+                    <img src="assets/img/examens/examen_7.jpeg" alt="Ostéodensitométrie" class="img-fluid rounded mt-3">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#examensCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#examensCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
     </section>
-    <aside class="md:w-1/3 bg-blue-900 bg-opacity-80 p-8 rounded-lg shadow-lg">
-        <h2 class="text-xl font-semibold border-b border-blue-400 pb-2 mb-4">Horaires</h2>
-        <div class="space-y-4 text-sm">
-            <div class="flex justify-between">
-                <span>Lundi – Vendredi</span><span>8:30 – 19:00</span>
-            </div>
-            <div class="flex justify-between">
-                <span>Samedi</span><span>8:30 – 13:00</span>
-            </div>
-        </div>
-        <p class="mt-6 text-center border-t border-blue-400 pt-4 text-sm">+212 522 50 51 55</p>
-    </aside>
-</main>
 
-<a href="https://wa.me/212522505155" target="_blank" class="fixed bottom-6 left-6 z-50">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="h-12 w-12">
-</a>
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment section light-background">
 
-<section class="flex flex-col md:flex-row items-center px-6 py-16 max-w-6xl mx-auto text-gray-800 gap-12">
-    <!-- Colonne 1 : Image -->
-    <div class="w-full h-full md:w-1/2">
-        <img src="assets/img/img_11.jpeg" alt="Centre Radiologie Pompidou" class="w-full rounded-lg shadow-lg" />
-    </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Prendre Rendez-vous</h2>
+        <p>Planifiez facilement une consultation avec nos spécialistes.</p>
+      </div><!-- End Section Title -->
 
-    <!-- Colonne 2 : Texte + Icônes -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-semibold mb-6">
-            Bienvenue au Centre de Radiologie<br />
-        </h2>
-        <p class="text-md leading-relaxed">
-            🔍 Explorez l'excellence en imagerie médicale 🔬<br />
-            Chez <strong>Radiologie Pompidou - Ain Chock</strong>, nous mettons à votre disposition une technologie de pointe pour un diagnostic précis et rapide 🏥✨<br /><br />
-            Depuis sa création, notre centre s'engage à offrir un accès simplifié à l’imagerie médicale moderne à travers un environnement humain, professionnel et innovant.
-        </p>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Blocs d'information -->
-        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center mt-10 gap-10">
-            <div class="flex flex-col items-center md:items-start">
-                <img src="assets/img/wave-divider.png" alt="Le Centre" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
-                <p class="font-semibold">LE CENTRE</p>
-                <p class="text-sm text-center md:text-left">Découvrez notre engagement et notre équipe</p>
-            </div>
-            <div class="flex flex-col items-center md:items-start">
-                <img src="assets/img/wave-divider.png" alt="Nos Services" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
-                <p class="font-semibold">NOS SERVICES</p>
-                <p class="text-sm text-center md:text-left">Une page dédiée pour mieux les découvrir</p>
-            </div>
-            <div class="flex flex-col items-center md:items-start">
-                <img src="assets/img/wave-divider.png" alt="Prenez RDV" class="w-12 h-12 mb-3 bg-gray-800 rounded-full" />
-                <p class="font-semibold">PRENEZ RENDEZ-VOUS</p>
-                <p class="text-sm text-center md:text-left">Planifiez votre consultation facilement</p>
-            </div>
-        </div>
-    </div>
-</section>
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
 
-<section class="text-center px-6 py-16 max-w-5xl mx-auto text-gray-800">
-    <div class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
-        <h1 class="text-xl font-semibold text-gray-700 dark:text-gray-200">Prendre Rendez-vous</h1>
-        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Remplissez le formulaire ci-dessous pour réserver une consultation ou un examen.</p>
+          <div class="row gy-3">
 
-        <form class="mt-6">
-            <div class="grid md:grid-cols-2 md:gap-6 mt-4">
-                <div>
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Nom complet*</label>
-                    <input type="text" required placeholder="Votre nom" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adresse e-mail*</label>
-                    <input type="email" required placeholder="nom@example.com" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
-                </div>
+            <div class="col-md-4">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" required>
             </div>
 
-            <div class="grid md:grid-cols-2 md:gap-6 mt-6">
-                <div>
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Téléphone*</label>
-                    <input type="tel" required placeholder="+212 6 12 34 56 78" class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Date souhaitée*</label>
-                    <input type="date" required class="block w-full px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none">
-                </div>
+            <div class="col-md-4">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Votre email" required>
             </div>
 
-            <div class="mt-6">
-                <label for="examen" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Type d'examen souhaité*</label>
-                <select id="examen" required class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-[#2a93d5] focus:border-[#2a93d5] block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                    <option value="" disabled selected>Sélectionnez un examen</option>
-                    <option>IRM</option>
-                    <option>Scanner</option>
-                    <option>Radiographie</option>
-                    <option>Échographie</option>
-                    <option>Imagerie de la femme</option>
-                    <option>Radiologie interventionnelle</option>
-                </select>
+            <div class="col-md-4">
+              <input type="tel" name="phone" class="form-control" id="phone" placeholder="Votre téléphone" required>
             </div>
 
-            <div class="mt-6">
-                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
-                <textarea placeholder="Informations complémentaires (facultatif)" class="block w-full h-32 px-5 py-3 mt-1 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-[#2a93d5] focus:ring focus:ring-[#2a93d5]/30 focus:outline-none"></textarea>
+            <div class="col-md-4">
+              <input type="datetime-local" name="date" class="form-control" id="date" placeholder="Date du rendez-vous" required>
             </div>
 
-            <button type="submit" class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white transition-colors duration-300 transform bg-[#2a93d5] rounded-md hover:bg-blue-600 focus:outline-none">
-                Envoyer la demande de rendez-vous
-            </button>
+            <div class="col-md-4">
+              <select name="department" id="department" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez un service</option>
+                <option value="IRM">IRM</option>
+                <option value="Scanner">Scanner</option>
+                <option value="Radiologie">Radiologie</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <select name="doctor" id="doctor" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez un médecin</option>
+                <option value="Dr. Dupont">Dr. Dupont</option>
+                <option value="Dr. Martin">Dr. Martin</option>
+                <option value="Dr. Bernard">Dr. Bernard</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea name="message" class="form-control" rows="5" placeholder="Message (optionnel)"></textarea>
+          </div>
+
+          <div class="mt-3">
+            <div class="loading">Chargement...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre demande de rendez-vous a été envoyée avec succès. Merci !</div>
+            <div class="text-center"><button type="submit" class="btn btn-primary">Prendre Rendez-vous</button></div>
+          </div>
+
         </form>
-    </div>
 
-</section>
-<footer class="bg-white text-gray-700 pt-12 pb-6 border-t">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div>
-            <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou" class="w-32 mb-4">
-            <p class="mb-2">
-                🔍 <strong>Explorez l'excellence en imagerie médicale</strong> 🔬<br>
-                Chez <strong>Radiologie Pompidou - Ain Chock</strong>, nous mettons à votre disposition une technologie de pointe pour un diagnostic précis et rapide 🏥✨
-            </p>
-            <p class="text-sm">En savoir plus sur nous</p>
-            <div class="flex space-x-4 mt-4 text-blue-500 text-xl">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+    </section><!-- /Appointment Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Elfsight All-in-One Reviews | Untitled All-in-One Reviews -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-06b8584b-95f8-4b90-883f-71c20361f066" data-elfsight-app-lazy></div>
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Galerie</h2>
+        <p>Explorez notre environnement médical à travers des images de notre centre, équipements et équipe dédiée.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper align-items-center">
+            <!-- Slides from img_1.jpeg to img_14.jpeg -->
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_1.jpeg"><img src="assets/img/img_1.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_2.jpeg"><img src="assets/img/img_2.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_3.jpeg"><img src="assets/img/img_3.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_4.jpeg"><img src="assets/img/img_4.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_5.jpeg"><img src="assets/img/img_5.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_6.jpeg"><img src="assets/img/img_6.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_7.jpeg"><img src="assets/img/img_7.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_8.jpeg"><img src="assets/img/img_8.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_9.jpeg"><img src="assets/img/img_9.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_10.jpeg"><img src="assets/img/img_10.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_11.jpeg"><img src="assets/img/img_11.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_12.jpeg"><img src="assets/img/img_12.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_13.jpeg"><img src="assets/img/img_13.jpeg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/img_14.jpeg"><img src="assets/img/img_14.jpeg" class="img-fluid" alt=""></a></div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Questions Fréquemment Posées</h2>
+        <p>Retrouvez ici les réponses aux questions les plus courantes concernant nos examens et services d'imagerie médicale.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-container">
+
+              <div class="faq-item">
+                <h3>Faut-il une ordonnance pour passer un examen d’imagerie ?</h3>
+                <div class="faq-content">
+                  <p>Oui, pour la plupart des examens comme l’IRM, le scanner ou l’échographie, une prescription médicale est nécessaire.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Est-ce que les examens sont remboursés par la sécurité sociale ?</h3>
+                <div class="faq-content">
+                  <p>Oui, nos examens sont remboursables selon la réglementation en vigueur et la couverture de votre assurance maladie ou mutuelle.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Dois-je être à jeun pour une échographie ?</h3>
+                <div class="faq-content">
+                  <p>Cela dépend du type d’échographie. Pour une échographie abdominale, être à jeun est recommandé. Pour d'autres, ce n’est pas nécessaire.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Combien de temps dure un examen IRM ou scanner ?</h3>
+                <div class="faq-content">
+                  <p>Un examen dure en moyenne entre 15 et 30 minutes, selon la région explorée et les protocoles utilisés.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Les examens sont-ils douloureux ?</h3>
+                <div class="faq-content">
+                  <p>Non, la plupart des examens sont non invasifs et totalement indolores. Certains peuvent nécessiter une injection de produit de contraste.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>Comment recevoir mes résultats d’examen ?</h3>
+                <div class="faq-content">
+                  <p>Les résultats sont disponibles le jour même ou le lendemain. Vous pouvez les récupérer sur place ou les recevoir par e-mail sécurisé.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
             </div>
+          </div>
         </div>
-        <div>
-            <h3 class="text-lg font-bold mb-2 border-b border-blue-500 w-fit pb-1">NOUS CONTACTER</h3>
-            <p class="mb-1">📍 Angle Bd El Qods & Av. 2Mars Ain Chock</p>
-            <p class="mb-1">📞 05 22 50 51 55</p>
-            <p class="mb-4">📧 radiologiepompidou2025@gmail.com</p>
-            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>N'hésitez pas à nous contacter pour toute demande de rendez-vous ou information complémentaire.</p>
+      </div><!-- End Section Title -->
+
+      <!-- Google Maps -->
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 90vw; height: 370px;margin-left: 5vw;"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.553095023916!2d-7.599975899999999!3d33.539003199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63300395b28cd%3A0xcb251b4e1c2ac09c!2sCentre%20de%20RADIOLOGIE%20POMPIDOU%20AIN%20CHOCK!5e0!3m2!1sen!2sma!4v1750275271598!5m2!1sen!2sma"
+                frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <!-- Contact Info -->
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Adresse</h3>
+                  <p>Angle Bd El Qods & Av. 2Mars, Ain Chock, Casablanca</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Téléphone</h3>
+                  <p> 05 22 50 51 55</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>radiologiepompidou2025@gmail.com</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Chargement...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci !</div>
+
+                  <button type="submit">Envoyer le message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
         </div>
-        <div>
-            <h3 class="text-lg font-bold mb-2 border-b border-blue-500 w-fit pb-1">NOS EXAMENS</h3>
-            <ul class="space-y-2 text-sm">
-                <li>➤ IRM 1,5 T multicanaux ultra rapide</li>
-                <li>➤ Scanner 64 barrettes Smart génération</li>
-                <li>➤ Radiographie os, poumon et Smart Ortho</li>
-                <li>➤ Échographie Doppler dernière génération</li>
-                <li>➤ Mammographie numérique Low Dose</li>
-                <li>➤ Panoramique dentaire & Cone Beam 2D/3D</li>
-                <li>➤ OSTEODENSITOMÉTRIE corps entier</li>
-            </ul>
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+<footer id="footer" class="footer light-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <!-- Clinique info -->
+      <div class="col-lg-4 col-md-6 footer-about">
+        <div class="footer-contact pt-3">
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock" style="max-height: 70px!important;">
+          </a>
+          <p>📍 Angle Bd El Qods & Av. 2 Mars</p>
+          <p>Ain Chock, Casablanca</p>
+          <p class="mt-3"><strong>📞 Téléphone:</strong> <span>05 22 50 51 55</span></p>
+          <p><strong>📧 Email:</strong> <span>radiologiepompidou2025@gmail.com</span></p>
         </div>
+        <div class="social-links d-flex mt-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Liens utiles -->
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Nos examens</a></li>
+          <li><a href="#appointment">Prendre RDV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Examens -->
+      <div class="col-lg-3 col-md-4 footer-links">
+        <h4>Nos Examens</h4>
+        <ul>
+          <li><a href="#">IRM 1,5 T Multicanaux</a></li>
+          <li><a href="#">Scanner 64 Barrettes</a></li>
+          <li><a href="#">Échographie Doppler</a></li>
+          <li><a href="#">Mammographie Low Dose</a></li>
+          <li><a href="#">Cone Beam 2D/3D</a></li>
+        </ul>
+      </div>
+
+      <!-- Heures et liens -->
+      <div class="col-lg-3 col-md-4 footer-links">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#">Lundi – Samedi : 08h00 – 20h00</a></li>
+          <li><a href="#">Dimanche : Fermé</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="text-center text-gray-500 text-sm mt-10 border-t pt-4">
-        © 2025 Centre de Radiologie Pompidou. Tous droits réservés.
+  </div>
+
+  <!-- Bas de page -->
+  <div class="container copyright text-center mt-4">
+    <p>© 2025 <strong class="sitename">Radiologie Pompidou</strong>. Tous droits réservés.</p>
+    <div class="credits">
+      Site conçu avec ❤️ par <a href="https://stayinmedia.ma/" target="_blank">Stayinmedia</a>
     </div>
+  </div>
+
 </footer>
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
