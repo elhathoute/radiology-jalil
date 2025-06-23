@@ -1968,3 +1968,34 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* Style pour le breadcrumb */
+.examen-hero .breadcrumb {
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.examen-hero .breadcrumb-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.examen-hero .breadcrumb-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.examen-hero .breadcrumb-item a:hover {
+  color: #e1e54a;
+  text-decoration: underline;
+}
+
+.examen-hero .breadcrumb-item.active {
+  color: #e1e54a;
+}
+
+.examen-hero .breadcrumb-item+.breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6);
+  content: ">";
+}
