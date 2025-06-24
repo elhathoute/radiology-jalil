@@ -47,12 +47,12 @@
 
         <div class="container position-relative d-flex align-items-center justify-content-end">
             <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock">
+                <img src="../assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock">
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Accueil</a></li>
+                    <li><a href="../index.html" class="active">Accueil</a></li>
                     <li><a href="#about">Centre</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Examens</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -103,7 +103,22 @@
             </div>
         </div>
     </section>
-
+    <!-- Video Section -->
+    <section class="examen-video section bg-light py-4">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 rounded shadow">
+                        <video class="rounded rounded-2" autoplay muted loop playsinline preload="metadata" poster="../assets/img/video-poster.jpg">
+                            <source src="../assets/video/diapo-radiologie.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo HTML5.
+                        </video>
+                    </div>
+                    <p class="text-center mt-2 fst-italic">Découvrez la technologie de radiographie numérique utilisée dans notre centre</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Exam Details Section -->
     <section id="examen-details" class="examen-details section">
         <div class="container">

@@ -31,13 +31,13 @@
 
         <div class="container position-relative d-flex align-items-center justify-content-end">
             <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <img src="assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock">
+                <img src="../assets/img/logo.png" alt="Logo Radiologie Pompidou Ain Chock">
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Accueil</a></li>
-                    <li><a href="#about">Centre</a></li>
+                    <li><a href="../index.html" class="active">Accueil</a></li>
+                    <li><a href="../index.htm">Centre</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Examens</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -85,7 +85,23 @@
             </div>
         </div>
     </section>
-
+    <section class="examen-video section bg-light py-4">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 rounded shadow">
+                        <video class="rounded rounded-2" autoplay muted loop playsinline preload="metadata" poster="../assets/img/video-poster.jpg">
+                            <source src="../assets/video/diapo-echographie.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéo HTML5.
+                        </video>
+                    </div>
+                    <p class="text-center mt-2 fst-italic">
+                        Découvrez la technologie avancée de notre écho-doppler pour des diagnostics précis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="examen-details section">
         <div class="container">
             <div class="row">
@@ -162,7 +178,8 @@
             </div>
         </div>
     </section>
-</main><footer id="footer" class="footer light-background">
+</main>
+<footer id="footer" class="footer light-background">
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
@@ -195,12 +212,12 @@
             <div class="col-lg-3 col-md-4 footer-links">
                 <h4>Nos Examens</h4>
                 <ul>
-                    <li><a href="#">Radiographie Numérique</a></li>
+                    <li><a href="./radiographie-numerique.html">Radiographie Numérique</a></li>
                     <li><a href="./irm.html">IRM</a></li>
                     <li><a href="./irm-corps-entier.html">IRM Corps Entier</a></li>
                     <li><a href="./scanner.html">Scanner</a></li>
                     <li><a href="./echographie.html">Échographie Générale</a></li>
-                    <li><a href="./echo-doppler.html">Écho-Doppler Vasculaire</a></li>
+                    <li><a href="#">Écho-Doppler Vasculaire</a></li>
                     <li><a href="./mammographie-numerique.html">Mammographie Numérique Haute Définition</a></li>
                     <li><a href="./osteodensitometrie.html">Ostéodensitométrie</a></li>
                     <li><a href="./imagerie-interventionnelle.html">Imagerie Interventionnelle</a></li>
