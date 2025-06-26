@@ -197,8 +197,11 @@
 
     const wrapper = document.getElementById('galleryWrapper');
 
+    const ignore = new Set([1,2,6,8,9,10,12,13,14,16,17,19,21,24,26,27,29,34,36]);
+
     // Images existantes (ex: img_1.jpeg à img_14.jpeg)
     for (let i = 1; i <= 14; i++) {
+      if (ignore.has(i)) continue;
     const slide = `
       <div class="swiper-slide">
         <a class="glightbox" data-gallery="images-gallery" href="assets/img/img_${i}.jpeg">
@@ -208,16 +211,19 @@
     wrapper.insertAdjacentHTML('beforeend', slide);
   }
 
-    // Images supplémentaires (ex: RADIOLOGIE AIN CHOK-1.jpg à 36.jpg)
-    for (let i = 1; i <= 36; i++) {
+
+  for (let i = 1; i <= 36; i++) {
+    if (ignore.has(i)) continue;  // ignore les images listées
+
     const imagePath = `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${i}.jpg`;
     const slide = `
-      <div class="swiper-slide">
-        <a class="glightbox" data-gallery="images-gallery" href="${imagePath}">
-          <img src="${imagePath}" class="img-fluid" alt="">
-        </a>
-      </div>`;
+    <div class="swiper-slide">
+      <a class="glightbox" data-gallery="images-gallery" href="${imagePath}">
+        <img src="${imagePath}" class="img-fluid" alt="">
+      </a>
+    </div>`;
     wrapper.insertAdjacentHTML('beforeend', slide);
   }
+
 
 })();
