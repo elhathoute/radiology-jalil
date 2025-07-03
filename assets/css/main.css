@@ -1860,11 +1860,8 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
+  display: none;
   transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
 }
 
 .faq .faq-container .faq-item .faq-content p {
@@ -1895,16 +1892,13 @@ section,
 }
 
 .faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
+  display: block;
   padding-top: 10px;
 }
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
-}
+  color: var(--accent-color);}
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2094,4 +2088,9 @@ section,
 .examen-hero .breadcrumb-item+.breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.6);
   content: ">";
+}
+
+
+.ulo {
+  list-style-type: none;
 }
