@@ -6,11 +6,11 @@ function toggleInput() {
   function sendMessage() {
     var message = document.getElementById('whatsapp-input').value;
     if (message.trim()) {
-      var phoneNumber = '+212658331678'; // The phone number to send the message to
+      var phoneNumber = '+212658331678';
       var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank'); // Open WhatsApp chat with the message
-      document.getElementById('whatsapp-input').value = ''; // Clear the input field
-      toggleInput(); // Hide the input field again
+      window.open(url, '_blank');
+      document.getElementById('whatsapp-input').value = ''; 
+      toggleInput(); 
     } else {
       alert("Veuillez entrer un message.");
     }

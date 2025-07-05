@@ -2094,3 +2094,28 @@ section,
 .ulo {
   list-style-type: none;
 }
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-item {
+  cursor: pointer;
+  font-weight: 400;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.filter-item:hover {
+  border-color: #00bcd4;
+}
+
+.filter-item.active {
+  border-color: #00bcd4;
+}

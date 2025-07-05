@@ -65,7 +65,7 @@
           <li class="dropdown">
             <a href="#"><span>Examens</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="examens/radiographie-numerique.html">Radiographie Numérique</a></li>
+              <li><a href="examens/radiographie-numerique.html">Radiographie Numériqhghsyue</a></li>
               <li><a href="examens/irm.html">IRM</a></li>
               <li><a href="examens/irm-corps-entier.html">IRM Corps Entier</a></li>
               <li><a href="examens/scanner.html">Scanner</a></li>
@@ -424,6 +424,20 @@
               }
             }
           </script>
+          <div class="filter-controls mb-4 d-flex justify-content-center">
+            <ul class="filter-list">
+              <li class="filter-item active" data-type="All">Tous</li>
+              <li class="filter-item" data-type="Accueil">Accueil</li>
+              <li class="filter-item" data-type="Radio">Radio</li>
+              <li class="filter-item" data-type="IRM">IRM</li>
+              <li class="filter-item" data-type="Scanner">Scanner</li>
+              <li class="filter-item" data-type="Echo">Echo</li>
+              <li class="filter-item" data-type="Ostéopathe">Ostéopathe</li>
+              <li class="filter-item" data-type="Panoramique">Panoramique</li>
+              <li class="filter-item" data-type="Mamo">Mamo</li>
+            </ul>
+          </div>    
+          
           <div class="swiper-wrapper align-items-center" id="galleryWrapper">
             <!-- Les images seront injectées ici par JS -->
           </div>
@@ -556,31 +570,32 @@
 
           <!-- Contact Form -->
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                  <input id="name", type="text" name="name" class="form-control" placeholder="Votre nom" required>
                 </div>
 
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Votre email" required>
+                  <input id= "email" , type="email" class="form-control" name="email" placeholder="Votre email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Objet" required>
+                  <input id="subject" type="text" class="form-control" name="subject" placeholder="Objet" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+                  <textarea id="message" class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Chargement...</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Votre message a été envoyé. Merci !</div>
-
-                  <button type="submit">Envoyer le message</button>
+                  <!-- Messages d'état -->
+                  <div class="loading" style="display: none;">Chargement...</div>
+                  <div class="error-message" style="display: none; color: red;"></div>
+                  <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé. Merci !</div>
+ 
+                  <button type="submit" onclick="Email()">Envoyer le message</button>
                 </div>
 
               </div>
@@ -654,7 +669,7 @@
           <li><a href="./examens/mammographie-numerique.html">Mammographie Numérique Haute Définition</a></li>
           <li><a href="./examens/osteodensitometrie.html">Ostéodensitométrie</a></li>
           <li><a href="./examens/imagerie-interventionnelle.html">Imagerie Interventionnelle</a></li>
-          <li><a href="examens/imagerie-dentaire.html">Imagerie Dentaire </a></li>
+          <li><a href="./examens/imagerie-dentaire.html">Imagerie Dentaire </a></li>
         </ul>
 
       </div>
@@ -700,6 +715,17 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/email.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "DlLO6dPAw1oy20N6o",
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
