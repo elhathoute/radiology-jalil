@@ -10,7 +10,7 @@
   <meta name="keywords" content="Radiologie, Imagerie Médicale, IRM, Scanner, Échographie, Centre Médical, Ain Chock, Casablanca, Radiologie Pompidou">
 
   <!-- Favicons -->
-  <link rel="icon" href="assets/img/logo.jpeg">
+  <link rel="icon" href="assets/img/ALBUM 1.svg">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <!-- Google Fonts -->
@@ -51,7 +51,7 @@
 
       <!-- Logo -->
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.jpeg" alt="Logo Radiologie Pompidou Ain Chock" style="height: 60px;">
+        <img src="assets/img/logo2.png" alt="Logo Radiologie Pompidou Ain Chock" style="height: 50px;">
       </a>
 
       <!-- Slogan -->
@@ -85,7 +85,20 @@
       </nav>
 
       <!-- Call to action -->
-      <a class="cta-btn ms-3" href="#appointment">Prenez un Rendez-vous</a>
+       <style>#bobi{
+        display: inline-block;   /* Bien : élément bloc en ligne */
+        padding: 12px 10px;      /* Espace intérieur haut/bas, gauche/droite */
+        min-width: 170px;        /* Largeur minimale */
+        text-align: center;      /* Centre le texte horizontalement */
+        background-color: #2092b2; /* Couleur de fond */
+        color: #fff;             /* Texte blanc */
+        border-radius: 4px;      /* Coins arrondis */
+        text-decoration: none;   /* Pas de soulignement */
+        font-weight: bold;       /* Texte en gras */
+        transition: all 0.3s ease; /* Animation fluide */
+        line-height: 1.2; 
+        }</style>
+      <a class="cta-btn ms-3" id="bobi" href="#appointment">Prenez un Rendez-vous</a>
 
     </div>
   </div>
@@ -150,7 +163,7 @@
 
         <div class="row justify-content-around gy-4">
           <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/img_11.jpeg" alt="Radiologie Pompidou - Ain Chock" class="rounded rounded-2">
+            <img src="assets\img\others\RADIOLOGIE AIN CHOK-4.jpg" alt="Radiologie Pompidou - Ain Chock" class="rounded rounded-2">
           </div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -329,22 +342,22 @@
             </div>
 
             <div class="col-md-4">
-              <select name="department" id="department" class="form-select" required>
+              <select name="department" id="department" class="form-select" required
+                onchange="if(this.value) window.location.href=this.value">
                 <option value="" disabled selected>Sélectionnez un service</option>
-                <option value="IRM">IRM</option>
-                <option value="Scanner">Scanner</option>
-                <option value="Radiologie">Radiologie</option>
+                <option value="examens/radiographie-numerique.html">Radiographie Numérique</option>
+                <option value="examens/irm.html">IRM</option>
+                <option value="examens/irm-corps-entier.html">IRM Corps Entier</option>
+                <option value="examens/scanner.html">Scanner</option>
+                <option value="examens/echographie.html">Échographie Générale</option>
+                <option value="examens/echo-doppler.html">Écho-Doppler Vasculaire</option>
+                <option value="examens/mammographie-numerique.html">Mammographie Numérique</option>
+                <option value="examens/osteodensitometrie.html">Ostéodensitométrie</option>
+                <option value="examens/imagerie-interventionnelle.html">Imagerie Interventionnelle</option>
+                <option value="examens/imagerie-dentaire.html">Imagerie Dentaire</option>
               </select>
             </div>
-
-            <div class="col-md-4">
-              <select name="doctor" id="doctor" class="form-select" required>
-                <option value="" disabled selected>Sélectionnez un médecin</option>
-                <option value="Dr. Dupont">Dr. Dupont</option>
-                <option value="Dr. Martin">Dr. Martin</option>
-                <option value="Dr. Bernard">Dr. Bernard</option>
-              </select>
-            </div>
+            
 
           </div>
 
@@ -570,40 +583,37 @@
 
           <!-- Contact Form -->
           <div class="col-lg-6">
-            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <form id="contactForm" action="#" method="POST" onsubmit="Email(event)"
+              class="php-email-form" data-aos="fade-up" data-aos-delay="500">
               <div class="row gy-4">
-
+            
                 <div class="col-md-6">
-                  <input id="name", type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                  <input id="name" type="text" name="name" class="form-control" placeholder="Votre nom" required>
                 </div>
-
+            
                 <div class="col-md-6">
-                  <input id= "email" , type="email" class="form-control" name="email" placeholder="Votre email" required>
+                  <input id="email" type="email" name="email" class="form-control" placeholder="Votre email" required>
                 </div>
-
+            
                 <div class="col-md-12">
-                  <input id="subject" type="text" class="form-control" name="subject" placeholder="Objet" required>
+                  <input id="subject" type="text" name="subject" class="form-control" placeholder="Objet" required>
                 </div>
-
+            
                 <div class="col-md-12">
-                  <textarea id="message" class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+                  <textarea id="message" name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
                 </div>
-
+            
                 <div class="col-md-12 text-center">
-                  <!-- Messages d'état -->
                   <div class="loading" style="display: none;">Chargement...</div>
                   <div class="error-message" style="display: none; color: red;"></div>
                   <div class="sent-message" style="display: none; color: green;">Votre message a été envoyé. Merci !</div>
- 
-                  <button type="submit" onclick="Email()">Envoyer le message</button>
+            
+                  <button type="submit">Envoyer le message</button>
                 </div>
-
+            
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-      </div>
+            
 
     </section><!-- /Contact Section -->
 
