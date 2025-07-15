@@ -195,35 +195,119 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-    const wrapper = document.getElementById('galleryWrapper');
+  const wrapper = document.getElementById('galleryWrapper');
+  const filter = document.getElementById('typeFilter');
+  
+  const images = [];
+  
+// 👉 Groupe Accueil : (16, 2’, 3’, 4’, 5’, 7)
+// 16 et 7 sont dans /others/, le reste est dans la racine img_*.jpeg
 
-    const ignore = new Set([1,2,6,8,9,10,12,13,14,16,17,19,21,24,26,27,29,34,36]);
+// 16 → dans /others/
+images.push({
+  src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-16.jpg`,
+  type: 'Accueil'
+});
 
-    // Images existantes (ex: img_1.jpeg à img_14.jpeg)
-    for (let i = 1; i <= 14; i++) {
-      if (ignore.has(i)) continue;
-    const slide = `
-      <div class="swiper-slide">
-        <a class="glightbox" data-gallery="images-gallery" href="assets/img/img_${i}.jpeg">
-          <img src="assets/img/img_${i}.jpeg" class="img-fluid" alt="">
-        </a>
-      </div>`;
-    wrapper.insertAdjacentHTML('beforeend', slide);
+// 7 → dans /others/
+images.push({
+  src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-7.jpg`,
+  type: 'Accueil'
+});
+  // 7 → dans /others/
+images.push({
+  src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-4.jpg`,
+  type: 'Accueil'
+});
+
+
+
+  // 👉 Groupe Radio : (17,2, 11)
+  // 17+ et 11 sont dans /others/
+  [17,11].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Radio'
+    });
+  });
+  
+  // 👉 Groupe IRM : (1+)
+  images.push({
+    src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-1.jpg`,
+    type: 'IRM'
+  });
+  
+  // 👉 Groupe Scanner : (12, 13, 14, 15)
+  [12, 13, 14, 15].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Scanner'
+    });
+  });
+  
+  // 👉 Groupe Echo : (2,5, 6, 10)
+  [ 5, 6, 10].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Echo'
+    });
+  });
+  
+  // 👉 Groupe Panoramique : (3)
+  [2, 3].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Panoramique'
+    });
+  });
+  
+  // 👉 Groupe Ostéopathe : (18)
+  images.push({
+    src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-18.jpg`,
+    type: 'Ostéopathe'
+  });
+  
+  // 👉 Groupe Mamo : (4, 8, 9)
+  [8, 9].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Mamo'
+    });
+  });
+  
+  let swiper;
+  
+  function renderImages(type) {
+    wrapper.innerHTML = '';
+  
+    const filtered = (type === 'All') ? images : images.filter(img => img.type === type);
+  
+    filtered.forEach(img => {
+      const slide = `
+        <div class="swiper-slide">
+          <a class="glightbox" data-gallery="images-gallery" href="${img.src}">
+            <img src="${img.src}" class="img-fluid" alt="">
+          </a>
+        </div>`;
+      wrapper.insertAdjacentHTML('beforeend', slide);
+    });
+  
+    if (swiper) swiper.destroy(true, true);
+    swiper = new Swiper('.init-swiper', JSON.parse(document.querySelector('.swiper-config').textContent));
   }
-
-
-  for (let i = 1; i <= 36; i++) {
-    if (ignore.has(i)) continue;  // ignore les images listées
-
-    const imagePath = `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${i}.jpg`;
-    const slide = `
-    <div class="swiper-slide">
-      <a class="glightbox" data-gallery="images-gallery" href="${imagePath}">
-        <img src="${imagePath}" class="img-fluid" alt="">
-      </a>
-    </div>`;
-    wrapper.insertAdjacentHTML('beforeend', slide);
-  }
-
+  
+  renderImages('All');
+  
+  document.querySelectorAll('.filter-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+  
+      const type = item.dataset.type;
+      renderImages(type);
+    });
+  });
+  
+  
 
 })();
