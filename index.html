@@ -38,7 +38,7 @@
   <div class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="d-none d-md-flex align-items-center">
-        <i class="bi bi-clock me-1"></i> Lundie - Vendredi, 8:30h à 22:00h  ---  Samedi, 8:30h à 14:00h
+        <i class="bi bi-clock me-1"></i> Lundi - Vendredi, 8:30h à 19:00h  ---  Samedi, 8:30h à 14:00h
       </div>
       <div class="d-flex align-items-center">
         <i class="bi bi-phone me-1"></i> Appelez-nous : 0522505155
@@ -55,9 +55,10 @@
   
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="../index.html" class="active">Accueil</a></li>
-          <li><a href="#about">Centre</a></li>
+          <li><a href="../index.html" class="active">Accueil</a></li>  
           <li><a href="#specialistes">Nos Spécialistes</a></li>
+          <li><a href="#about">Centre</a></li>
+        
           <li class="dropdown">
             <a href="#"><span>Examens</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -80,7 +81,13 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
   
-      <a class="cta-btn"  href="#appointment"  style=" margin-left: 160px;">Prenez un Rendez-vous</a>
+    <!-- Bouton responsive et centré -->
+    <div class="text-center text-lg-start">
+      <a class="cta-btn btn" href="#appointment">
+        Prenez un Rendez-vous
+      </a>
+    </div>
+
   
     </div>
   
@@ -138,20 +145,64 @@
       </div>
 
     </section><!-- /Hero Section -->
+<!-- Nos Spécialistes -->
+<section id="specialistes" class="features section section-offset">
 
-    <section id="about" class="features section">
+  <div class="container ">
+    <!-- Titre de section -->
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold">Nos Spécialistes </h2>
+      <p>Découvrez nos spécialistes dans le domaine de radiologie et de l'imagerie médicale.</p>
+    </div>
+    <!-- Contenu spécialiste -->
+    <div class="row g-4 align-items-start" data-aos="fade-up" data-aos-delay="100">
+      <!-- Image -->
+      <div class="col-lg-4 col-md-12">
+        <img src="assets/img/doctors/Dr El OUARDIGHI lamiae.jpg"
+          alt="Dr El OUARDIGHI Lamiae - Spécialiste en radiologie et imagerie médicale"
+          title="Dr El OUARDIGHI Lamiae - Spécialiste en radiologie et imagerie médicale"
+          class="img-fluid rounded-4 w-100 shadow-sm" style="max-height: 75vh; width: 100%; object-fit: cover;">
+      </div>
 
-      <div class="container">
+      <!-- Texte -->
+      <div class="col-lg-7 col-md-12 ">
+        <div class="member-info">
+          <h3 class="fw-bold">Dr El OUARDIGHI Lamiae</h3>
+          <span class="fw-bold fs-5 d-block mb-3 display-7">
+            Spécialiste en radiologie et imagerie médicale<br>
+            Diplômée de la Faculté de Médecine de Paris
+          </span>
+
+          <p style="font-size: 18px;">Diplômée et hyperspécialisée en imagerie de la femme et imagerie fœtale.</p>
+          <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie cardiaque.</p>
+          <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie endocrinologique.</p>
+          <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie digestive et imagerie d’urgence.</p>
+          <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie interventionnelle.</p>
+          <p style="font-size: 18px;">Ancienne praticien attachée des hôpitaux de l’AP-HP (Assistance Publique –
+            Hôpitaux de Paris).</p>
+
+          <div class="social d-flex align-items-center mt-3">
+            <a target="_blank" href="https://www.instagram.com/radiologie.pompidou?utm_source=qr"
+              class="me-3 text-dark"><i class="bi bi-instagram fs-5"></i></a>
+            <a target="_blank" href="https://web.facebook.com/RADIOLOGIE.POMPIDOU" class="me-3 text-dark"><i
+                class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="about" class="features section py-5">
+      <div class="container-lg">
 
         <div class="row justify-content-around gy-4">
           <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <video class="video-fluid rounded rounded-2" src="assets/video/WhatsApp Vidéo 2025-07-15 à 10.51.51_6a9cf33a.mp4"
-              autoplay muted playsinline loop controls>
+            <video style="height: 700px; width: 100%; object-fit: cover; border-radius: 0.5rem;" src="assets/video/WhatsApp Vidéo 2025-07-15 à 10.51.51_6a9cf33a.mp4"
+              class="rounded rounded-2 w-100 video-custom-height" autoplay muted playsinline loop controls>
             </video>
           </div>
-          
-          
-
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <h3>Bienvenue au Centre de Radiologie Pompidou - Ain Chock</h3>
             <p>Explorez l'excellence en imagerie médicale grâce à des équipements de dernière génération et une équipe dévouée à votre bien-être.</p>
@@ -195,54 +246,7 @@
 
     </section><!-- /Features Section -->
 
-    <!-- Nos Spécialistes -->
-    <section id="specialistes" class="features section">
-      <div class="container">
-        <!-- Titre de section -->
-        <div class="section-title text-center mb-5" data-aos="fade-up">
-          <h2 class="fw-bold">Nos Spécialistes </h2>
-          <p>Découvrez nos spécialistes dans le domaine de radiologie et de l'imagerie médicale.</p>
-        </div>
-        <!-- Contenu spécialiste -->
-        <div class="row g-4 align-items-start" data-aos="fade-up" data-aos-delay="100">
-          <!-- Image -->
-          <div class="col-lg-4 col-md-12">
-            <img src="assets/img/doctors/Dr El OUARDIGHI lamiae.jpg"
-              alt="Dr El OUARDIGHI Lamiae - Spécialiste en radiologie et imagerie médicale"
-              title="Dr El OUARDIGHI Lamiae - Spécialiste en radiologie et imagerie médicale"
-              class="img-fluid rounded-4 w-100 shadow-sm" style="max-height: 75vh; width: 100%; object-fit: cover;">
-          </div>
-    
-          <!-- Texte -->
-          <div class="col-lg-7 col-md-12 ">
-            <div class="member-info">
-              <h3 class="fw-bold">Dr El OUARDIGHI Lamiae</h3>
-              <span class="fw-bold fs-5 d-block mb-3 display-7">
-                Spécialiste en radiologie et imagerie médicale<br>
-                Diplômée de la Faculté de Médecine de Paris
-              </span>
-    
-              <p style="font-size: 18px;">Diplômée et hyperspécialisée en imagerie de la femme et imagerie fœtale.</p>
-              <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie cardiaque.</p>
-              <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie endocrinologique.</p>
-              <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie digestive et imagerie d’urgence.</p>
-              <p style="font-size: 18px;">Hyperspécialisée et diplômée en imagerie interventionnelle.</p>
-              <p style="font-size: 18px;">Ancienne praticien attachée des hôpitaux de l’AP-HP (Assistance Publique – Hôpitaux de Paris).</p>
-    
-              <div class="social d-flex align-items-center mt-3">
-                <a target="_blank" href="https://www.instagram.com/radiologie.pompidou?utm_source=qr" class="me-3 text-dark"><i class="bi bi-instagram fs-5"></i></a>
-                <a target="_blank" href="https://web.facebook.com/RADIOLOGIE.POMPIDOU" class="me-3 text-dark"><i class="bi bi-facebook fs-5"></i></a>
-                <a href="#" class="text-dark"><i class="bi bi-linkedin fs-5"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-
-
+   
     <!-- Services Section -->
     <section id="services" class="services section">
       <div class="container section-title" data-aos="fade-up">
@@ -616,8 +620,7 @@
                 </div>
             
                 <div class="col-md-12 text-center">
-                  <div class="loading2" style="display: none;">Chargement...</div>
-            
+                  
                   <button type="submit">Envoyer le message</button>
                 </div>
             
@@ -661,7 +664,7 @@
         <div class="social-links d-flex mt-4">
           <a href="https://web.facebook.com/RADIOLOGIE.POMPIDOU" target="_blank"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/radiologie.pompidou?utm_source=qr" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a  href="https://wa.me/212658331678" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a  href="https://wa.me/212666856545" target="_blank"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
 
@@ -701,8 +704,7 @@
       <div class="col-lg-3 col-md-4 footer-links">
         <h4>Informations</h4>
         <ul>
-          <li>Lundi – Samedi : 08h00 – 20h00</li>
-          <li>Dimanche : Fermé</li>
+          <li>Lundi - Vendredi, 8:30h à 19:00h  <br> <br>  Samedi, 8:30h à 14:00h</li>
           <li>Mentions légales</li>
           <li>Politique de confidentialité</li>
         </ul>

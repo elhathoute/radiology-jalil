@@ -17,15 +17,17 @@ function Email(event) {
     });
     return;
   }
-  const loading = document.querySelector('.loading2');
-  if (loading) loading.style.display = 'block';;
 
+  // ✅ Affichage du chargement
   const service_ID = "service_m4xn97r";
   const temp_ID = "template_hq0x3zt";
 
   emailjs.sendForm(service_ID, temp_ID, '#contactForm')
     .then((res) => {
       console.log(res);
+
+      
+
       // Réinitialisation des champs
       document.getElementById("subject").value = "";
       document.getElementById("name").value = "";
@@ -43,7 +45,7 @@ function Email(event) {
     })
     .catch((err) => {
       console.log(err);
-      if (loading) loading.style.display = 'none';
+
 
       // ❌ SweetAlert d'erreur
       Swal.fire({
@@ -54,5 +56,4 @@ function Email(event) {
         confirmButtonColor: '#d33'
       });
     });
-
 }

@@ -224,7 +224,7 @@ images.push({
 
   // 👉 Groupe Radio : (17,2, 11)
   // 17+ et 11 sont dans /others/
-  [17,11].forEach(num => {
+  [17,11,19].forEach(num => {
     images.push({
       src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
       type: 'Radio'
