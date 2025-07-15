@@ -285,7 +285,7 @@ footer img{
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #7fb639;
+  background-color: #1bc50b;
   border-radius: 50%;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,.2);
@@ -319,7 +319,7 @@ footer img{
 
 .whatsapp-header h3 {
   font-size: 18px;
-  color: #7fb639;
+  color: #1bc50b;
   margin: 0
 }
 
@@ -341,7 +341,7 @@ footer img{
 .whatsapp-input-container button {
   width: 100%;
   padding: 12px;
-  background-color: #7fb639;
+  background-color: #1bc50b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -2118,4 +2118,34 @@ section,
 
 .filter-item.active {
   border-color: #00bcd4;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2092b2;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .cta-btn {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+.custom-underline {
+  width: 40px;
+  height: 3px;
+  background-color: #32b6c4;
+  /* Couleur turquoise comme dans l’image */
+  margin-top: 6px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

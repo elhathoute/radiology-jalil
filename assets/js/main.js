@@ -214,18 +214,17 @@ images.push({
   src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-7.jpg`,
   type: 'Accueil'
 });
-
-// 2’, 3’, 4’, 5’ → dans la racine
-[2, 3, 4, 5].forEach(num => {
-  images.push({
-    src: `assets/img/img_${num}.jpeg`,
-    type: 'Accueil'
-  });
+  // 7 → dans /others/
+images.push({
+  src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-4.jpg`,
+  type: 'Accueil'
 });
+
+
 
   // 👉 Groupe Radio : (17,2, 11)
   // 17+ et 11 sont dans /others/
-  [17,2, 11].forEach(num => {
+  [17,11].forEach(num => {
     images.push({
       src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
       type: 'Radio'
@@ -247,7 +246,7 @@ images.push({
   });
   
   // 👉 Groupe Echo : (2,5, 6, 10)
-  [2, 5, 6, 10].forEach(num => {
+  [ 5, 6, 10].forEach(num => {
     images.push({
       src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
       type: 'Echo'
@@ -255,9 +254,11 @@ images.push({
   });
   
   // 👉 Groupe Panoramique : (3)
-  images.push({
-    src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-3.jpg`,
-    type: 'Panoramique'
+  [2, 3].forEach(num => {
+    images.push({
+      src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
+      type: 'Panoramique'
+    });
   });
   
   // 👉 Groupe Ostéopathe : (18)
@@ -267,7 +268,7 @@ images.push({
   });
   
   // 👉 Groupe Mamo : (4, 8, 9)
-  [4, 8, 9].forEach(num => {
+  [8, 9].forEach(num => {
     images.push({
       src: `assets/img/others/RADIOLOGIE%20AIN%20CHOK-${num}.jpg`,
       type: 'Mamo'

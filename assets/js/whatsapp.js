@@ -12,6 +12,13 @@ function toggleInput() {
       document.getElementById('whatsapp-input').value = ''; 
       toggleInput(); 
     } else {
-      alert("Veuillez entrer un message.");
+      Swal.fire({
+        icon: 'warning',
+        title: 'Champ vide',
+        text: 'Veuillez entrer un message.',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#2092b2'
+      });
     }
-}
+  }
+ 
