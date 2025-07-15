@@ -2149,3 +2149,9 @@ section,
   margin-bottom: 20px;
   margin-top: 20px;
 }
+@media (min-width: 768px) {
+  .section-offset {
+    padding-left: 180px;
+    /* ou margin-left: 5%; */
+  }
+}
